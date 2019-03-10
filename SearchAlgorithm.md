@@ -32,7 +32,10 @@
 
 ### Code
 
-[#### Swift](LinearSearch.playground)
+#### Swift
+
+[Source Code](LinearSearch.playground)
+
 ```swift
 func linearSearch<T: Equatable>(_ array: [T], _ object: T) -> Int? {
   for (index, obj) in array.enumerated() where obj == object {
