@@ -5,7 +5,7 @@ Algorithm Study Repo.
 ## 유명한 알고리즘들
 * __탐색__
 	* [__선형 탐색(Liner Search)__](SearchAlgorithm.md) : 맨 앞부터 순서대로 찾음 [Linear search wikipedia link](https://en.wikipedia.org/wiki/Linear_search)
-	* __이진 탐색(Binary Search)__ : 범위를 절반씩 추려가면서 찾음 [Binary search algorithm wikipedia link](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+	* [__이진 탐색(Binary Search)__](BinarySearch.md) : 범위를 절반씩 추려가면서 찾음 [Binary search algorithm wikipedia link](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 	* __Hash 탐색__ : 계산해서 저장 위치를 찾음 [Hash function wikipedia link](https://en.wikipedia.org/wiki/Hash_function)
 
 
