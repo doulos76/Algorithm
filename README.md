@@ -10,7 +10,7 @@ Algorithm Study Repo.
 
 
 * __정렬__
-	* __단순 정렬법(선택 Sort)__ : maximum(minimum)을 선택해서 앞부터 순서대로 나열함
+	* [__단순 정렬법(선택 Sort)__](SelectionSort.md) : maximum(minimum)을 선택해서 앞부터 순서대로 나열함 [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
 	* __단순 교환법(Bubble Sort)__ : 옆에 있는 Data를 교환하면서 자리를 바꿔 나열함
 	* __단순 삽입(Insert Sort)__ : 데이터를 올바른 위치에 삽입하면서 자리를 바꿔 나열
 	* __Quart Sort__ : 기분 데이터를 기반으로 대소 분할을 반복하여 자리를 바꿔 나열
