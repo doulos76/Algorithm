@@ -2,6 +2,20 @@
 
 Algorithm Study Repo.
 
+## Computer Alogrithm
+
+### 의미
+
+- computer algorithm은 주어진 문제를 효율적으로 풀기 위한 방법을 단겨별로 기술해 놓은 것
+- 기본적인 연산능력만 가지고 있다면 누구나 문제를 해결할 수 있도록 명확하게 기술되어야 함
+
+### 분석
+
+- 문제 정의
+- 알고리즘 설명
+- 정확성 증명
+- 성능 분석
+
 ## 유명한 알고리즘들
 * __탐색__
 	* [__선형 탐색(Liner Search)__](SearchAlgorithm.md) : 맨 앞부터 순서대로 찾음 [Linear search wikipedia link](https://en.wikipedia.org/wiki/Linear_search)
