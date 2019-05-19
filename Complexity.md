@@ -1,9 +1,16 @@
-import UIKit
+# Complexity
 
-//: # Time complexity
+## Time complexity
 
-//: ## Constant time : O(1)
+* __Time complexity__ is a measure of the time requrired to run an algorithm as the input size increases.
 
+### Constant time
+
+* __Bit O notation__ : _O(1)_
+
+A constant time algorithm is one that has the same running time regardless of the size fo the input.
+
+```Swift
 func checkFirst(names: [String]) {
   if let first = names.first {
     print(first)
@@ -11,23 +18,36 @@ func checkFirst(names: [String]) {
     print("no names")
   }
 }
+```
 
-let names = ["Kim", "Lee", "Koo", "Park"]
-checkFirst(names: names)
+The size fo the `names` array has no effect on the running time of this function.
 
-//: ## Linear Time : O(n)
+![](/image/constant_time_graph.png)
 
+### Linear Time
+
+* __Bit O notation__ : _O(n)_
+
+```Swift
 func printNames(names: [String]) {
   for name in names {
     print(name)
   }
 }
+```
 
-printNames(names: names)
+This function prints out all the names in a `String` array. As the input array increases in size, the number of iterations that the `for` loop makes is increased by the same amount.
+
+This behavior is known as `linear time` complexity
+
+![](/image/linear_time_graph.png)
 
 
-//: ## Quadratic time : O(n^2)
+### Quadratic Time
 
+* __Bit O notation__ : _O(n^2)_
+
+```Swift
 func printNames2(names: [String]) {
   for _ in names {
     for name in names {
@@ -35,12 +55,17 @@ func printNames2(names: [String]) {
     }
   }
 }
+```
 
-printNames2(names: names)
+More commonly referred to as _n squared_, this time compleixity refers to an algorithm that takes time proportional to the square of the input size.
 
+![](/image/quadratic_time_graph.png)
 
-//: ## Logarithmic time : O(log n)
+### Logarithmic Time
 
+* __Bit O notation__ : _O(log n)_
+
+```Swift
 let numbers = [1 ,3 ,56, 66, 68, 80, 99, 105, 450]
 
 func naiveContains(_ value: Int, in array: [Int]) -> Bool {
@@ -51,10 +76,9 @@ func naiveContains(_ value: Int, in array: [Int]) -> Bool {
   }
   return false
 }
+```
 
-naiveContains(45, in: numbers)
-naiveContains(99, in: numbers)
-
+```Swift
 func naiveContains2(_ value: Int, in array: [Int]) -> Bool {
   guard !array.isEmpty else { return false }
   let middleIndex = array.count / 2
@@ -74,63 +98,39 @@ func naiveContains2(_ value: Int, in array: [Int]) -> Bool {
   }
   return false
 }
+```
 
-naiveContains2(34, in: numbers)
-naiveContains2(99, in: numbers)
+![](/image/logarithmic_time_graph.png)
 
-//: # Quasilinear time
+### Quasilinear time
 
-//: ## Comparing time complexity
+The quasilinear time complexity shares a similar curve with quadratic time, but is more resilient to large data sets.
 
-// complexity : O(n)
-func sumFromOne(upto n: Int) -> Int {
-  var result = 0
-  for i in 1...n {
-    result += i
-  }
-  return result
-}
+![](/image/quasilinear_time_graph.png)
 
-sumFromOne(upto: 10000)
+## Space complexity
 
-// complexity : O(n)
-func sumFromOne2(upto n: Int) -> Int {
-  return (1...n).reduce(0, +)
-}
+Space complexity is a measure of the resources required for the algorithm to run. For computers, the resources for a algorithms is memory.
 
-sumFromOne2(upto: 10000)
-
-// complexity : O(1)
-func sumFromOne3(upto n: Int) -> Int {
-  return (n + 1) * n / 2
-}
-
-sumFromOne3(upto: 10000)
-
-//: ## Space complexity
-
+```Swift
 func printSorted(_ array: [Int]) {
   let sorted = array.sorted()
   for element in sorted {
     print(element)
   }
 }
+```
 
-printSorted(numbers)
-
-print("\n================[Test]================\n")
-
+```Swift
 func printSorted2(_ array: [Int]) {
-  // 1. check for the case if the array is empty. if it is, there's noting to print.
+  // 1
   guard !array.isEmpty else { return }
   
-  // 2. currentCount keeps track of the number of print.
-  // statements made .minValue stores the last printed value.
+  // 2
   var currentCount = 0
   var minValue = Int.min
   
-  // 3. The algorithm begins by printing out all values matching the minValues,
-  // and updates the currentCount according to the number of print statements made.
+  // 3
   for value in array {
     if value == minValue {
       print(value)
@@ -139,8 +139,7 @@ func printSorted2(_ array: [Int]) {
   }
   
   while currentCount < array.count {
-    // 4. Using the while loop,
-    // the algorithm finds the lowest value bigger than minValue and stores it in currentValue.
+    // 4
     var currentValue = array.max()!
     
     for value in array {
@@ -149,7 +148,7 @@ func printSorted2(_ array: [Int]) {
       }
     }
     
-    // 5. The algorithm then prints all values of currentValue inside the array while updating currentCount.
+    // 5
     var printCount = 0
     for value in array {
       if value == currentValue {
@@ -158,9 +157,9 @@ func printSorted2(_ array: [Int]) {
       }
     }
     
-    // 6. minValue is set to currentValue so the next iteration will try to find the next minimum value.
+    // 6
     minValue = currentValue
   }
 }
+```
 
-printSorted2(numbers)
