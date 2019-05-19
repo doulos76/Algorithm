@@ -199,8 +199,8 @@ After inserting: 1 -> 2 -> -1 -> -1 -> -1 -> -1 -> 3
 
 |    |push|append|insert(after:)|node(at:)|
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|__Behaviour__|insert at head|insert at tail|insert after a node|returns a node at given index|
-|__Time complexity__|O(1)|O(1)|O(1)|O(i), where i is the given index|
+| __Behaviour__ |insert at head|insert at tail|insert after a node|returns a node at given index|
+| __Time complexity__ |O(1)|O(1)|O(1)|O(i), where i is the given index|
 
 ## Removing values from the list
 
