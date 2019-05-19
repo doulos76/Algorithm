@@ -53,4 +53,8 @@ Algorithm Study Repo.
 
 [__Complexity__](Complexity.md)
 
+## Elementeary Data Structures
+
+[__Linked List__](LinkedList.md)
+
 > 출처 : '처음 만나는 알고리즘' 이토 시즈카, Jpub
