@@ -1,6 +1,7 @@
 //: # Linked List
 import UIKit
 
+// LinkedList
 struct LinkedList<Value> {
   var head: Node<Value>?
   var tail: Node<Value>?
@@ -100,6 +101,7 @@ extension LinkedList: CustomStringConvertible {
   }
 }
 
+// Node
 class Node<Value> {
   var value: Value
   var next: Node?
